@@ -1,7 +1,0 @@
-Drop your resume PDF in this folder and name it exactly:
-
-    Catarina_Lucas_Herrera_Resume.pdf
-
-index.html already links to resume/Catarina_Lucas_Herrera_Resume.pdf,
-so once the file is here the "Download Resume" button will work.
-You can delete this text file once the real PDF is in place.

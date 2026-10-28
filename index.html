@@ -107,8 +107,7 @@
       <div class="relative mx-auto w-full max-w-xs lg:col-span-2">
         <div class="tape -left-4 -top-4 rotate-[-8deg] bg-gold-400 text-ink">UCHICAGO · B.S./M.S. CS</div>
         <div class="clip-torn photo-cutout rotate-[-2deg]">
-          <!-- Stand-in headshot — swap for a final professional photo whenever you'd like -->
-          <img src="photos/projectPictures/catarinalucashpic.png" alt="Portrait of Catarina Lucas Herrera" class="h-full w-full object-cover" />
+          <img src="photos/projectPictures/catarina-profile.jpg" alt="Portrait of Catarina Lucas Herrera" class="h-full w-full object-cover" />
         </div>
       </div>
 
@@ -187,7 +186,7 @@
               <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">Oct 2026 – Jun 2027</span>
             </div>
             <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">UChicago Art History Department</p>
-            <p class="mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
+            <p class="hidden mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
             <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">Collection Builder · GitHub · Linux · CSV</p>
             <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">Project in progress — link coming soon</p>
           </div>
@@ -207,7 +206,7 @@
               <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">Jun 2026 – Aug 2026</span>
             </div>
             <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">BrightBots Initiative Nonprofit</p>
-            <p class="mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
+            <p class="hidden mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
             <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">React · TypeScript · JavaScript · Docker · CI/CD Pipeline · Collaboration</p>
             <a href="https://brightboost.org/" target="_blank" rel="noopener"
                class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition hover:text-sky-900">
@@ -236,7 +235,7 @@
               <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">Jan 2026 – Aug 2026</span>
             </div>
             <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">UChicago Cinema and Media Studies</p>
-            <p class="mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
+            <p class="hidden mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
             <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">Unity · C# · Blender</p>
             <a href="https://www.linkedin.com/feed/update/urn:li:activity:7499126691785773056/" target="_blank" rel="noopener"
                class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition hover:text-sky-900">
@@ -251,11 +250,10 @@
 
         <article class="flex flex-col gap-4">
           <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Internal Communications &amp; Marketing</p>
-          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
-            <!-- Replace with: <img src="photos/projectPictures/your-photo.jpg" alt="..." class="h-full w-full object-cover"> -->
-            <div class="flex flex-col items-center gap-1.5">
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
-              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+          <div class="card-photo relative aspect-[4/3] w-full overflow-hidden" data-carousel>
+            <div data-carousel-track>
+              <!-- Add more <img> tags here for additional photos — carousel arrows appear automatically once there's more than one -->
+              <img src="photos/projectPictures/IMG_5363.jpg" alt="UChicago campus marketing photo" class="h-full w-full object-cover" />
             </div>
           </div>
           <div>
@@ -264,7 +262,7 @@
               <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">Jan 2025 – Aug 2025</span>
             </div>
             <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">UChicago Office of Communications</p>
-            <p class="mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
+            <p class="hidden mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
             <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">Asana · Sitecore · Detail-Oriented · Iterations · Video Editing</p>
             <div class="mt-3 flex flex-wrap gap-x-4 gap-y-1.5">
               <a href="https://www.instagram.com/reel/DLKsXQdtm3c/" target="_blank" rel="noopener"
@@ -297,20 +295,28 @@
 
         <article class="flex flex-col gap-4">
           <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Frontend</p>
-          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
-            <div class="flex flex-col items-center gap-1.5">
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
-              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+          <div class="card-photo relative aspect-[4/3] w-full overflow-hidden" data-carousel>
+            <div data-carousel-track>
+              <!-- Add more <img> tags here for additional photos — carousel arrows appear automatically once there's more than one -->
+              <img src="photos/projectPictures/code-your-dreams.jpg" alt="Code Your Dreams nonprofit logo and classroom photos" class="h-full w-full object-cover" />
             </div>
           </div>
           <div>
             <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <h3 class="font-display text-xl font-semibold">[Role Title]</h3>
-              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">[Mon Year] – [Mon Year]</span>
+              <h3 class="font-display text-xl font-semibold">Code Your Dreams Computer Science Intern</h3>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">Jun 2024 – Aug 2024</span>
             </div>
-            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">[Company Name]</p>
-            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built, your role, and the impact.]</p>
-            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">[Skill] · [Skill] · [Skill]</p>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">Code Your Dreams Nonprofit</p>
+            <p class="hidden mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">Edovo Learning Program · CSS · HTML · Squarespace · Icon Design</p>
+            <a href="https://codeyourdreams.org/" target="_blank" rel="noopener"
+               class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition hover:text-sky-900">
+              View Page
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 7l-10 10M17 7H8M17 7v9" />
+              </svg>
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
           </div>
         </article>
 
@@ -330,58 +336,138 @@
 
         <article class="flex flex-col gap-4">
           <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Hardware</p>
-          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
-            <div class="flex flex-col items-center gap-1.5">
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
-              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+          <div class="card-photo relative aspect-[4/3] w-full overflow-hidden" data-carousel>
+            <div data-carousel-track>
+              <!-- Add more <img> tags here for additional photos — carousel arrows appear automatically once there's more than one -->
+              <img src="photos/projectPictures/IMG_3055.jpg" alt="MP3 Player - Slider project photo" class="h-full w-full object-cover" />
+              <img src="photos/projectPictures/IMG_3066.jpg" alt="MP3 Player - Slider project photo" class="h-full w-full object-cover" />
+              <img src="photos/projectPictures/IMG_3010.jpg" alt="MP3 Player - Slider concept sketch" class="h-full w-full object-cover" />
             </div>
           </div>
           <div>
             <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <h3 class="font-display text-xl font-semibold">[Project Title]</h3>
-              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">[Mon Year] – [Mon Year]</span>
+              <h3 class="font-display text-xl font-semibold">MP3 Player - Slider</h3>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">Spring 2026</span>
             </div>
-            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">[Class / Lab / Independent]</p>
-            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built and why it mattered.]</p>
-            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">[Skill] · [Skill] · [Skill]</p>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">Actuated User Interfaces</p>
+            <p class="hidden mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">Processing · Analog · 3D Printing</p>
+            <a href="https://youtu.be/7rlf5Ds85N0" target="_blank" rel="noopener"
+               class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition hover:text-sky-900">
+              View Demo
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 7l-10 10M17 7H8M17 7v9" />
+              </svg>
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
           </div>
         </article>
 
         <article class="flex flex-col gap-4">
-          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Prototyping</p>
-          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
-            <div class="flex flex-col items-center gap-1.5">
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
-              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Hardware</p>
+          <div class="card-photo relative aspect-[4/3] w-full overflow-hidden" data-carousel>
+            <div data-carousel-track>
+              <!-- Add more <img> tags here for additional photos — carousel arrows appear automatically once there's more than one -->
+              <img src="photos/projectPictures/IMG_2944.jpg" alt="Projected Visualization - EV Mapping project photo" class="h-full w-full object-cover" />
             </div>
           </div>
           <div>
             <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <h3 class="font-display text-xl font-semibold">[Project Title]</h3>
-              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">[Mon Year] – [Mon Year]</span>
+              <h3 class="font-display text-xl font-semibold">Projected Visualization - EV Mapping</h3>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">Spring 2026</span>
             </div>
-            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">[Class / Lab / Independent]</p>
-            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built and why it mattered.]</p>
-            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">[Skill] · [Skill] · [Skill]</p>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">Actuated User Interfaces</p>
+            <p class="hidden mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">Processing · Data Mapping</p>
+            <a href="https://youtu.be/4vrcSacUi4o" target="_blank" rel="noopener"
+               class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition hover:text-sky-900">
+              View Demo
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 7l-10 10M17 7H8M17 7v9" />
+              </svg>
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
           </div>
         </article>
 
         <article class="flex flex-col gap-4">
           <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Robotics</p>
-          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
-            <div class="flex flex-col items-center gap-1.5">
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
-              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+          <div class="card-photo relative aspect-[4/3] w-full overflow-hidden" data-carousel>
+            <div data-carousel-track>
+              <!-- Add more <img> tags here for additional photos — carousel arrows appear automatically once there's more than one -->
+              <img src="photos/projectPictures/IMG_2271.jpg" alt="Turtle Art Bot drawing on a whiteboard" class="h-full w-full object-cover" />
             </div>
           </div>
           <div>
             <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <h3 class="font-display text-xl font-semibold">[Project Title]</h3>
-              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">[Mon Year] – [Mon Year]</span>
+              <h3 class="font-display text-xl font-semibold">Turtle Art Bot</h3>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">Autumn 2025</span>
             </div>
-            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">[Class / Lab / Independent]</p>
-            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built and why it mattered.]</p>
-            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">[Skill] · [Skill] · [Skill]</p>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">Robotics</p>
+            <p class="hidden mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">Computer Vision · LLM Integration</p>
+            <a href="https://youtube.com/shorts/I15OG2TdLUc?si=8HZbSBIuR9OUh4Lv" target="_blank" rel="noopener"
+               class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition hover:text-sky-900">
+              View Video
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 7l-10 10M17 7H8M17 7v9" />
+              </svg>
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="flex flex-col gap-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Robotics</p>
+          <div class="card-photo relative aspect-[4/3] w-full overflow-hidden" data-carousel>
+            <div data-carousel-track>
+              <!-- Add more <img> tags here for additional photos — carousel arrows appear automatically once there's more than one -->
+              <img src="photos/projectPictures/IMG_2765.jpg" alt="Particle Filter Localization project demo" class="h-full w-full object-cover" />
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 class="font-display text-xl font-semibold">Particle Filter Localization</h3>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">Autumn 2025</span>
+            </div>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">Robotics</p>
+            <p class="hidden mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">Computer Vision · ROS2 · Particle Filter Localization</p>
+            <a href="https://youtube.com/shorts/X0fiPnUAqyA?feature=share" target="_blank" rel="noopener"
+               class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition hover:text-sky-900">
+              View Video
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 7l-10 10M17 7H8M17 7v9" />
+              </svg>
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="flex flex-col gap-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Hardware</p>
+          <div class="card-photo relative aspect-[4/3] w-full overflow-hidden" data-carousel>
+            <div data-carousel-track>
+              <!-- Add more <img> tags here for additional photos — carousel arrows appear automatically once there's more than one -->
+              <img src="photos/projectPictures/IMG_3038.jpg" alt="Feel The Music circuit build" class="h-full w-full object-cover" />
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h3 class="font-display text-xl font-semibold">Feel The Music</h3>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">Jun 2024 – Aug 2024</span>
+            </div>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">Actuated User Interfaces</p>
+            <p class="hidden mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">Processing · Fast Fourier Transform (FFT) · Audacity Audio</p>
+            <a href="https://youtu.be/p-1YuxGH5LQ" target="_blank" rel="noopener"
+               class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition hover:text-sky-900">
+              View Video
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 7l-10 10M17 7H8M17 7v9" />
+              </svg>
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
           </div>
         </article>
 
@@ -402,38 +488,54 @@
         <div class="mt-6 grid gap-x-10 gap-y-12 sm:grid-cols-2">
 
           <article class="flex flex-col gap-4">
-            <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
-              <div class="flex flex-col items-center gap-1.5">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
-                <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+            <div class="card-photo relative aspect-[4/3] w-full overflow-hidden" data-carousel>
+              <div data-carousel-track>
+                <!-- Add more <img> tags here for additional photos — carousel arrows appear automatically once there's more than one -->
+                <img src="photos/projectPictures/album-tribute-screenshot.jpg" alt="Album Tribute Iterations project screenshot" class="h-full w-full object-cover" />
               </div>
             </div>
             <div>
               <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <h3 class="font-display text-xl font-semibold">[Course / Project Title]</h3>
-                <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">[Mon Year] – [Mon Year]</span>
+                <h3 class="font-display text-xl font-semibold">Album Tribute Iterations</h3>
+                <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">Autumn 2026</span>
               </div>
-              <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">[Course Number — University of Chicago]</p>
-              <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on how you used Claude Code / agentic tooling and what you built.]</p>
-              <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">[Skill] · [Skill] · [Skill]</p>
+              <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">Design Build Ship</p>
+              <p class="hidden mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
+              <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">HTML · CSS · Vercel · Next.js</p>
+              <a href="https://album-tribute.vercel.app/" target="_blank" rel="noopener"
+                 class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition hover:text-sky-900">
+                View Project
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 7l-10 10M17 7H8M17 7v9" />
+                </svg>
+                <span class="sr-only">(opens in a new tab)</span>
+              </a>
             </div>
           </article>
 
           <article class="flex flex-col gap-4">
-            <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
-              <div class="flex flex-col items-center gap-1.5">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
-                <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+            <div class="card-photo relative aspect-[4/3] w-full overflow-hidden" data-carousel>
+              <div data-carousel-track>
+                <!-- Add more <img> tags here for additional photos — carousel arrows appear automatically once there's more than one -->
+                <img src="photos/Captura de pantalla 2026-10-28 091630.png" alt="Divvy Explorer project screenshot" class="h-full w-full object-cover" />
               </div>
             </div>
             <div>
               <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <h3 class="font-display text-xl font-semibold">[Course / Project Title]</h3>
-                <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">[Mon Year] – [Mon Year]</span>
+                <h3 class="font-display text-xl font-semibold">Divvy Explorer</h3>
+                <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">Autumn 2026</span>
               </div>
-              <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">[Course Number — University of Chicago]</p>
-              <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on how you used Claude Code / agentic tooling and what you built.]</p>
-              <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">[Skill] · [Skill] · [Skill]</p>
+              <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">Design Build Ship</p>
+              <p class="hidden mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
+              <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">Vercel · Next.js · Supabase · Clerk · APIs</p>
+              <a href="https://catch-me-on-a-divvy.vercel.app/" target="_blank" rel="noopener"
+                 class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition hover:text-sky-900">
+                View Project
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 7l-10 10M17 7H8M17 7v9" />
+                </svg>
+                <span class="sr-only">(opens in a new tab)</span>
+              </a>
             </div>
           </article>
 
@@ -465,7 +567,7 @@
               <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/65">2025</span>
             </div>
             <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/65">Uncommon Hacks</p>
-            <p class="mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
+            <p class="hidden mt-3 text-sm leading-relaxed text-ink/70">[Description coming soon]</p>
             <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/65">OAuth · Pixel Art · Collaboration</p>
             <a href="https://anvils.vercel.app/" target="_blank" rel="noopener"
                class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-700 transition hover:text-sky-900">

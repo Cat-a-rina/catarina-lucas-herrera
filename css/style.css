@@ -1,0 +1,139 @@
+/* ============================================================
+   Catarina Lucas Herrera — Portfolio
+   Custom styles layered on top of Tailwind (see index.html <head>
+   for the Tailwind config: colors "sky" / "gold" / "cream" / "ink").
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: #fffdf8;
+  color: #20262b;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: "Playfair Display", serif;
+}
+
+/* Offset anchored sections so the fixed nav doesn't cover the heading */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* ---------- Halftone dot texture (used as a subtle background accent) ---------- */
+.bg-halftone {
+  background-image: radial-gradient(currentColor 1px, transparent 1.6px);
+  background-size: 14px 14px;
+}
+
+/* ---------- Torn-paper / sticker cutout edge, used for the hero photo ---------- */
+.clip-torn {
+  clip-path: polygon(
+    2% 6%, 9% 1%, 18% 4%, 27% 0%, 37% 3%, 47% 0%, 57% 4%, 67% 1%, 77% 4%,
+    88% 0%, 97% 5%, 100% 13%, 96% 22%, 100% 32%, 97% 41%, 100% 51%,
+    96% 60%, 100% 70%, 97% 79%, 100% 88%, 95% 97%, 86% 100%, 76% 96%,
+    66% 100%, 56% 97%, 46% 100%, 36% 96%, 26% 100%, 16% 97%, 6% 100%,
+    1% 91%, 5% 81%, 0% 71%, 4% 61%, 0% 51%, 4% 41%, 0% 31%, 4% 21%, 0% 12%
+  );
+}
+
+.photo-cutout {
+  filter: grayscale(100%) contrast(1.05);
+  background-color: #fffdf8;
+  padding: 0.65rem;
+  box-shadow: 0 18px 35px -12px rgba(32, 38, 43, 0.35);
+  transition: filter 0.5s ease;
+}
+
+.photo-cutout:hover {
+  filter: grayscale(20%) contrast(1.05);
+}
+
+/* ---------- Washi-tape style accent strips ---------- */
+.tape {
+  position: absolute;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  padding: 0.35rem 0.9rem;
+  box-shadow: 0 6px 14px -6px rgba(32, 38, 43, 0.35);
+  z-index: 20;
+}
+
+/* ---------- Project / coursework photo placeholder ---------- */
+.photo-slot {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(32, 38, 43, 0.06),
+    rgba(32, 38, 43, 0.06) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+/* Same placeholder texture, lightened for dark sections (e.g. Beyond the Code) */
+.photo-slot-dark {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 253, 248, 0.08),
+    rgba(255, 253, 248, 0.08) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+/* Grayscale-to-color pop on hover for project photos once they're added */
+.card-photo img {
+  filter: grayscale(100%);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.card-photo:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+/* ---------- Mobile nav ---------- */
+#mobile-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+#mobile-nav.open {
+  max-height: 24rem;
+}
+
+/* ---------- Nav active link ---------- */
+.nav-link[data-active="true"] {
+  color: #1f6f93;
+}
+
+.nav-link[data-active="true"]::after {
+  transform: scaleX(1);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 2px;
+  background: #e8b73f;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}

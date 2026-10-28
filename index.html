@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Catarina Lucas Herrera — Portfolio</title>
+<meta name="description" content="Portfolio of Catarina Lucas Herrera — UChicago B.S./M.S. Computer Science, full-stack development, VR, and systems design." />
+
+<!-- Fonts: Playfair Display for headlines, Work Sans for everything else (only two fonts, used everywhere) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Tailwind (Play CDN — no build step needed) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          sky: {
+            50: "#f0f8fc",
+            100: "#dcedf5",
+            200: "#b7dbec",
+            400: "#5fa8cc",
+            600: "#2d7ea3",
+            700: "#1f6f93",
+            900: "#163f52",
+          },
+          gold: {
+            50: "#fbf4e2",
+            100: "#f5e6bd",
+            400: "#e8b73f",
+            500: "#d4a52f",
+            600: "#b98a1e",
+          },
+          cream: "#fffdf8",
+          ink: "#20262b",
+        },
+        fontFamily: {
+          display: ["Playfair Display", "serif"],
+          sans: ["Work Sans", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-cream text-ink antialiased">
+
+<!-- ================= NAV ================= -->
+<header class="fixed inset-x-0 top-0 z-50 border-b border-gold/20 bg-cream/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-sky-700 font-display text-lg font-bold text-cream">CL</span>
+      <span class="hidden font-display text-lg font-semibold tracking-tight sm:block">Catarina Lucas Herrera</span>
+    </a>
+
+    <nav class="hidden items-center gap-8 text-sm font-semibold md:flex">
+      <a href="#internships" class="nav-link">Internships</a>
+      <a href="#undergrad" class="nav-link">Undergrad Projects</a>
+      <a href="#grad" class="nav-link">Grad Coursework</a>
+      <a href="#hackathons" class="nav-link">Hackathons</a>
+      <a href="#beyond" class="nav-link">Beyond the Code</a>
+      <button type="button" class="resume-trigger rounded-full bg-gold-400 px-4 py-2 text-ink shadow-sm transition hover:bg-gold-500">Resume</button>
+    </nav>
+
+    <button id="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu" class="md:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-nav" class="border-t border-gold/20 bg-cream md:hidden">
+    <nav class="flex flex-col gap-1 px-6 py-4 text-sm font-semibold">
+      <a href="#internships" class="rounded-lg px-3 py-2 hover:bg-sky-50">Internships</a>
+      <a href="#undergrad" class="rounded-lg px-3 py-2 hover:bg-sky-50">Undergrad Projects</a>
+      <a href="#grad" class="rounded-lg px-3 py-2 hover:bg-sky-50">Grad Coursework</a>
+      <a href="#hackathons" class="rounded-lg px-3 py-2 hover:bg-sky-50">Hackathons</a>
+      <a href="#beyond" class="rounded-lg px-3 py-2 hover:bg-sky-50">Beyond the Code</a>
+      <button type="button" class="resume-trigger mt-1 rounded-lg bg-gold-400 px-3 py-2 text-left text-ink">Resume</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="relative overflow-hidden pb-20 pt-32 sm:pt-36">
+    <!-- halftone accent blobs -->
+    <div class="bg-halftone absolute -left-10 top-10 h-56 w-56 text-sky-200/70"></div>
+    <div class="bg-halftone absolute -right-16 bottom-0 h-72 w-72 text-gold-100"></div>
+    <!-- decorative collage flowers, tucked behind the copy -->
+    <img src="photos/decor/flower-1.png" alt="" aria-hidden="true"
+         class="pointer-events-none absolute -right-10 bottom-4 z-0 w-44 rotate-[14deg] select-none opacity-40 mix-blend-multiply sm:w-56" />
+    <img src="photos/decor/flower-2.png" alt="" aria-hidden="true"
+         class="pointer-events-none absolute left-4 top-6 z-0 w-28 rotate-[-10deg] select-none opacity-25 mix-blend-multiply sm:w-32" />
+
+    <div class="relative z-10 mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-5">
+
+      <!-- Photo -->
+      <div class="relative mx-auto w-full max-w-xs lg:col-span-2">
+        <div class="tape -left-4 -top-4 rotate-[-8deg] bg-gold-400 text-ink">UCHICAGO · B.S./M.S. CS</div>
+        <div class="clip-torn photo-cutout rotate-[-2deg]">
+          <!-- Stand-in headshot — swap for a final professional photo whenever you'd like -->
+          <img src="photos/projectPictures/catarinalucashpic.png" alt="Portrait of Catarina Lucas Herrera" class="h-full w-full object-cover" />
+        </div>
+      </div>
+
+      <!-- Elevator pitch -->
+      <div class="lg:col-span-3">
+        <h1 class="font-display text-4xl font-bold leading-tight sm:text-5xl">
+          Catarina Lucas Herrera
+        </h1>
+        <p class="mt-2 text-lg font-semibold text-ink/70">
+          Full-Stack Developer · Systems Thinker · Builder
+        </p>
+
+        <p class="mt-6 max-w-2xl text-base leading-relaxed text-ink/80 sm:text-lg">
+          Catarina Lucas Herrera is a fourth-year joint-degree student at the University of Chicago,
+          working toward a Bachelor of Science and Master of Science in Computer Science. While she
+          focuses on full-stack development, object-oriented programming, and system design, she is
+          curious to try everything in tech — from wearable technology to sustainability and computing.
+          She has a talent for easily placing herself in a different perspective, which has been immensely
+          useful when designing for a wide range of communities, whether designing for a child, an
+          incarcerated individual, or an individual with lupus. Catarina is more than ready to transition
+          the knowledge gained through the rigorous UChicago curriculum into industry, and is always up
+          for a challenge.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <button type="button" class="resume-trigger inline-flex items-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-sm font-semibold text-cream shadow-md transition hover:bg-sky-900">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.5 12S5.5 5.5 12 5.5 21.5 12 21.5 12 18.5 18.5 12 18.5 2.5 12 2.5 12z" />
+              <circle cx="12" cy="12" r="2.75" />
+            </svg>
+            View Resume
+          </button>
+          <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-3 text-sm font-semibold text-ink transition hover:border-sky-700 hover:text-sky-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.12V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.66 1.8-2.66 3.65V23h-4V8z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/your-handle" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-3 text-sm font-semibold text-ink transition hover:border-sky-700 hover:text-sky-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERNSHIP EXPERIENCE ================= -->
+  <section id="internships" class="relative overflow-hidden bg-sky-50/60 py-20">
+    <img src="photos/decor/flower-2.png" alt="" aria-hidden="true"
+         class="pointer-events-none absolute -right-8 top-10 z-0 w-40 rotate-[10deg] select-none opacity-30 mix-blend-multiply" />
+
+    <div class="relative z-10 mx-auto max-w-5xl px-6">
+      <h2 class="font-display text-3xl font-bold sm:text-4xl">Internship Experience</h2>
+
+      <div class="mt-12 grid gap-x-10 gap-y-14 sm:grid-cols-2">
+
+        <article class="flex flex-col gap-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Internal Communications &amp; Marketing</p>
+          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
+            <!-- Replace with: <img src="photos/projectPictures/your-photo.jpg" alt="..." class="h-full w-full object-cover"> -->
+            <div class="flex flex-col items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h4 class="font-display text-xl font-semibold">[Role Title]</h4>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/45">[Mon Year] – [Mon Year]</span>
+            </div>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/45">[Company Name]</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built, your role, and the impact.]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/45">[Skill] · [Skill] · [Skill]</p>
+          </div>
+        </article>
+
+        <article class="flex flex-col gap-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Virtual Reality</p>
+          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
+            <div class="flex flex-col items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h4 class="font-display text-xl font-semibold">[Role Title]</h4>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/45">[Mon Year] – [Mon Year]</span>
+            </div>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/45">[Company Name]</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built, your role, and the impact.]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/45">[Skill] · [Skill] · [Skill]</p>
+          </div>
+        </article>
+
+        <article class="flex flex-col gap-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Full Stack</p>
+          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
+            <div class="flex flex-col items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h4 class="font-display text-xl font-semibold">[Role Title]</h4>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/45">[Mon Year] – [Mon Year]</span>
+            </div>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/45">[Company Name]</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built, your role, and the impact.]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/45">[Skill] · [Skill] · [Skill]</p>
+          </div>
+        </article>
+
+        <article class="flex flex-col gap-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Frontend</p>
+          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
+            <div class="flex flex-col items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h4 class="font-display text-xl font-semibold">[Role Title]</h4>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/45">[Mon Year] – [Mon Year]</span>
+            </div>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/45">[Company Name]</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built, your role, and the impact.]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/45">[Skill] · [Skill] · [Skill]</p>
+          </div>
+        </article>
+
+        <article class="flex flex-col gap-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Database Management</p>
+          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
+            <div class="flex flex-col items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h4 class="font-display text-xl font-semibold">[Role Title]</h4>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/45">[Mon Year] – [Mon Year]</span>
+            </div>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/45">[Company Name]</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built, your role, and the impact.]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/45">[Skill] · [Skill] · [Skill]</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= UNDERGRADUATE PROJECTS ================= -->
+  <section id="undergrad" class="relative overflow-hidden py-20">
+    <img src="photos/decor/flower-2.png" alt="" aria-hidden="true"
+         class="pointer-events-none absolute -left-16 top-24 z-0 w-56 -rotate-[10deg] select-none opacity-30 mix-blend-multiply" />
+
+    <div class="relative z-10 mx-auto max-w-5xl px-6">
+      <h2 class="font-display text-3xl font-bold sm:text-4xl">Undergraduate Projects</h2>
+
+      <div class="mt-12 grid gap-x-10 gap-y-14 sm:grid-cols-2">
+
+        <article class="flex flex-col gap-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Hardware</p>
+          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
+            <div class="flex flex-col items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h4 class="font-display text-xl font-semibold">[Project Title]</h4>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/45">[Mon Year] – [Mon Year]</span>
+            </div>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/45">[Class / Lab / Independent]</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built and why it mattered.]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/45">[Skill] · [Skill] · [Skill]</p>
+          </div>
+        </article>
+
+        <article class="flex flex-col gap-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Prototyping</p>
+          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
+            <div class="flex flex-col items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h4 class="font-display text-xl font-semibold">[Project Title]</h4>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/45">[Mon Year] – [Mon Year]</span>
+            </div>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/45">[Class / Lab / Independent]</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built and why it mattered.]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/45">[Skill] · [Skill] · [Skill]</p>
+          </div>
+        </article>
+
+        <article class="flex flex-col gap-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.15em] text-sky-700">Robotics</p>
+          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
+            <div class="flex flex-col items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h4 class="font-display text-xl font-semibold">[Project Title]</h4>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/45">[Mon Year] – [Mon Year]</span>
+            </div>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/45">[Class / Lab / Independent]</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built and why it mattered.]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/45">[Skill] · [Skill] · [Skill]</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GRADUATE COURSEWORK ================= -->
+  <section id="grad" class="relative overflow-hidden bg-sky-50/60 py-20">
+    <img src="photos/decor/flower-1.png" alt="" aria-hidden="true"
+         class="pointer-events-none absolute -right-12 bottom-6 z-0 w-44 rotate-[-12deg] select-none opacity-30 mix-blend-multiply scale-x-[-1]" />
+
+    <div class="relative z-10 mx-auto max-w-5xl px-6">
+      <h2 class="font-display text-3xl font-bold sm:text-4xl">Graduate Coursework</h2>
+
+      <div class="mt-14">
+        <h3 class="font-semibold uppercase tracking-[0.15em] text-sky-700">Claude Code Experience</h3>
+        <div class="mt-6 grid gap-x-10 gap-y-12 sm:grid-cols-2">
+
+          <article class="flex flex-col gap-4">
+            <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
+              <div class="flex flex-col items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
+                <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h4 class="font-display text-xl font-semibold">[Course / Project Title]</h4>
+                <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/45">[Mon Year] – [Mon Year]</span>
+              </div>
+              <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/45">[Course Number — University of Chicago]</p>
+              <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on how you used Claude Code / agentic tooling and what you built.]</p>
+              <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/45">[Skill] · [Skill] · [Skill]</p>
+            </div>
+          </article>
+
+          <article class="flex flex-col gap-4">
+            <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
+              <div class="flex flex-col items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
+                <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h4 class="font-display text-xl font-semibold">[Course / Project Title]</h4>
+                <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/45">[Mon Year] – [Mon Year]</span>
+              </div>
+              <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/45">[Course Number — University of Chicago]</p>
+              <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on how you used Claude Code / agentic tooling and what you built.]</p>
+              <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/45">[Skill] · [Skill] · [Skill]</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HACKATHONS ================= -->
+  <section id="hackathons" class="relative overflow-hidden py-20">
+    <img src="photos/decor/flower-2.png" alt="" aria-hidden="true"
+         class="pointer-events-none absolute -left-10 top-8 z-0 w-40 rotate-[8deg] select-none opacity-30 mix-blend-multiply" />
+
+    <div class="relative z-10 mx-auto max-w-5xl px-6">
+      <h2 class="font-display text-3xl font-bold sm:text-4xl">Hackathons</h2>
+
+      <div class="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2">
+
+        <article class="flex flex-col gap-4">
+          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
+            <div class="flex flex-col items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h4 class="font-display text-xl font-semibold">[Hackathon Name]</h4>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/45">[Mon Year]</span>
+            </div>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/45">[Project Name] · [Placement / Award]</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built in 24–48 hours and your role on the team.]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/45">[Skill] · [Skill] · [Skill]</p>
+          </div>
+        </article>
+
+        <article class="flex flex-col gap-4">
+          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
+            <div class="flex flex-col items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h4 class="font-display text-xl font-semibold">[Hackathon Name]</h4>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/45">[Mon Year]</span>
+            </div>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/45">[Project Name] · [Placement / Award]</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built in 24–48 hours and your role on the team.]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/45">[Skill] · [Skill] · [Skill]</p>
+          </div>
+        </article>
+
+        <article class="flex flex-col gap-4">
+          <div class="card-photo photo-slot flex aspect-[4/3] w-full items-center justify-center text-ink/35">
+            <div class="flex flex-col items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.5"/></svg>
+              <span class="text-[11px] font-medium uppercase tracking-wide">Add photo</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h4 class="font-display text-xl font-semibold">[Hackathon Name]</h4>
+              <span class="whitespace-nowrap text-xs font-medium uppercase tracking-wide text-ink/45">[Mon Year]</span>
+            </div>
+            <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-ink/45">[Project Name] · [Placement / Award]</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink/70">[One or two sentences on what you built in 24–48 hours and your role on the team.]</p>
+            <p class="mt-3 text-xs font-medium uppercase tracking-wide text-ink/45">[Skill] · [Skill] · [Skill]</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BEYOND THE CODE ================= -->
+  <section id="beyond" class="relative overflow-hidden bg-ink py-20 text-cream">
+    <div class="bg-halftone absolute -right-10 -top-10 h-64 w-64 text-gold-400/30"></div>
+    <img src="photos/decor/flower-1.png" alt="" aria-hidden="true"
+         class="pointer-events-none absolute -bottom-10 left-0 z-0 w-48 rotate-[-6deg] select-none opacity-20 sm:w-60" />
+
+    <div class="relative z-10 mx-auto max-w-6xl px-6">
+      <h2 class="font-display text-3xl font-bold sm:text-4xl">Beyond the Code</h2>
+
+      <div class="mt-10 grid items-center gap-12 lg:grid-cols-5">
+        <p class="text-base leading-relaxed text-cream/80 lg:col-span-3">
+          When she's away from a keyboard, Catarina is usually planning her next trip, baking something
+          that didn't quite survive the oven, experimenting with painting, or biking around Hyde Park.
+          On campus, she debates global policy with Chicago Model United Nations
+          <span class="font-semibold text-gold-400">(CHOMUN)</span> and connects with fellow engineers
+          through the Society of Hispanic Professional Engineers
+          <span class="font-semibold text-gold-400">(SHPE)</span>. She stays rooted in community through
+          the Organization of Latin American Students
+          <span class="font-semibold text-gold-400">(OLAS)</span> and MEChA, two spaces that keep her
+          close to home while she's away at school. She also serves as a Resident Assistant
+          <span class="font-semibold text-gold-400">(RA)</span> on campus — a role that keeps her just
+          as invested in people as she is in building things for them.
+        </p>
+
+        <div class="lg:col-span-2">
+          <!-- Drop in org/role logos below — replace each placeholder with: <img src="photos/projectPictures/your-icon.png" alt="..." class="h-full w-full object-contain"> -->
+          <div class="grid grid-cols-3 gap-4">
+            <div class="photo-slot-dark flex aspect-square items-center justify-center rounded-full border border-gold-400/30 text-cream/40">
+              <span class="text-[10px] font-medium uppercase tracking-wide">Icon</span>
+            </div>
+            <div class="photo-slot-dark flex aspect-square items-center justify-center rounded-full border border-gold-400/30 text-cream/40">
+              <span class="text-[10px] font-medium uppercase tracking-wide">Icon</span>
+            </div>
+            <div class="photo-slot-dark flex aspect-square items-center justify-center rounded-full border border-gold-400/30 text-cream/40">
+              <span class="text-[10px] font-medium uppercase tracking-wide">Icon</span>
+            </div>
+            <div class="photo-slot-dark flex aspect-square items-center justify-center rounded-full border border-gold-400/30 text-cream/40">
+              <span class="text-[10px] font-medium uppercase tracking-wide">Icon</span>
+            </div>
+            <div class="photo-slot-dark flex aspect-square items-center justify-center rounded-full border border-gold-400/30 text-cream/40">
+              <span class="text-[10px] font-medium uppercase tracking-wide">Icon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="relative overflow-hidden border-t border-gold/20 bg-cream py-10">
+  <img src="photos/decor/flower-2.png" alt="" aria-hidden="true"
+       class="pointer-events-none absolute -right-6 -top-6 z-0 w-24 rotate-[6deg] select-none opacity-25 mix-blend-multiply" />
+
+  <div class="relative z-10 mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 text-center">
+    <div class="flex items-center gap-5">
+      <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener" class="text-ink/60 transition hover:text-sky-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.12V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.66 1.8-2.66 3.65V23h-4V8z"/>
+        </svg>
+      </a>
+      <a href="https://github.com/your-handle" target="_blank" rel="noopener" class="text-ink/60 transition hover:text-sky-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.21.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+        </svg>
+      </a>
+      <a href="mailto:catarina1@uchicago.edu" class="text-ink/60 transition hover:text-sky-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M3 6h18v12H3V6z" />
+        </svg>
+      </a>
+    </div>
+    <p class="text-sm text-ink/50">&copy; <span id="year"></span> Catarina Lucas Herrera. Built with Tailwind CSS.</p>
+  </div>
+</footer>
+
+<!-- ================= RESUME PREVIEW MODAL ================= -->
+<div id="resume-modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-ink/70 px-4 py-8">
+  <div class="relative flex h-full max-h-[85vh] w-full max-w-3xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
+    <div class="flex items-center justify-between border-b border-ink/10 px-5 py-3">
+      <h3 class="font-display text-lg font-semibold">Resume</h3>
+      <div class="flex items-center gap-3">
+        <a href="resume/Catarina_Lucas_Herrera_Resume.pdf" download
+           class="inline-flex items-center gap-1.5 rounded-full bg-sky-700 px-4 py-1.5 text-sm font-semibold text-cream transition hover:bg-sky-900">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" />
+          </svg>
+          Download
+        </a>
+        <button id="resume-modal-close" type="button" aria-label="Close resume preview"
+                class="rounded-full p-1.5 text-ink/60 transition hover:bg-ink/5 hover:text-ink">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Once resume/Catarina_Lucas_Herrera_Resume.pdf exists, it renders here automatically -->
+    <iframe src="resume/Catarina_Lucas_Herrera_Resume.pdf" title="Resume PDF preview" class="h-full w-full flex-1"></iframe>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
